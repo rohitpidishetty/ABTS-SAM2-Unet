@@ -87,12 +87,12 @@ fmv2 = FMv2.get_results()
 
 
 curr_results = {
-    "meandice": (fmv2["dice"]["dynamic"].sum() / 100.0),
-    "meaniou": (fmv2["iou"]["dynamic"].sum() / 100.0),
+    "meandice": (fmv2["dice"]["dynamic"].mean()),
+    "meaniou": (fmv2["iou"]["dynamic"].mean()),
     'Smeasure': sm,
     "wFmeasure": wfm,  # For Marine Animal Segmentation
     "adpFm": fm["adp"], # For Camouflaged Object Detection
-    "meanEm": (em["curve"].sum() / 200.0),
+    "meanEm": (em["curve"].mean()),
     "MAE": mae,
 }
 
